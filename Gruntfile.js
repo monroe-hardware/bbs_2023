@@ -94,8 +94,17 @@ module.exports = function(grunt) {
 
     Object.keys(Tasks).map( k => grunt.registerTask(k, Tasks[k]) );
 
-    grunt.registerTask("stage", "Deploy to staging/sync directory.", function() {
-        grunt.file.copy("www", grunt.config.get('env.deploy'));
+    grunt.registerTask("stage", "Deploy to GitHub.", function() {
+        let done = this.async();
+
+        //grunt.file.copy("www", grunt.config.get('env.deploy'));
+        let ghp = require('gh-pages');
+        ghp.publish('www', {
+            branch: 'gh-pages'
+        }, (err) => {
+            if(err) console.log(err);
+            else done();
+        });
     });
 }
 
