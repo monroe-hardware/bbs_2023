@@ -7,9 +7,7 @@ module.exports = function(grunt) {
             build_date: '<%= grunt.template.today("yyyymmddHHMM") %>',
             version_string: '<=% pkg.version %>-<%= meta.build_date %>'
         },
-        env: {
-            api: "127.0.0.1:9999"
-        },
+        env: {},
 
         buildTemplates: {
             options: grunt.file.readJSON('etc/tmpl_config.json')
