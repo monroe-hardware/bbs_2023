@@ -2,7 +2,8 @@
     "site": {
         "name": "<%= meta.site_name %>",
         "cachebust": "<%= grunt.template.today(\"yyyymmddHHMM\") %>",
-        "gtm_id": "GTM-MKQ3G6XT"
+        "gtm_id": "GTM-MKQ3G6XT",
+        "facebook_id": "298402966940"
     },
     "page": {
         "template": "index",
