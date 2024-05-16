@@ -41,6 +41,7 @@ www/
 
 # Dependency directories
 node_modules/
+node_modules.old/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)

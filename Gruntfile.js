@@ -98,7 +98,8 @@ module.exports = function(grunt) {
         //grunt.file.copy("www", grunt.config.get('env.deploy'));
         let ghp = require('gh-pages');
         ghp.publish('www', {
-            branch: 'gh-pages'
+            branch: 'gh-pages',
+            repo: 'https://github.com/monroe-hardware/bbs_2023.git'
         }, (err) => {
             if(err) console.log(err);
             else done();
